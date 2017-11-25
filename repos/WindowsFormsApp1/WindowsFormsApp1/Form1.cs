@@ -26,8 +26,8 @@ namespace WindowsFormsApp1
             con.Open();
             if(con.State == System.Data.ConnectionState.Open)
             {
-                string q = "Insert into EMPLOYEESTABLE(id,FIRST-NAME)values('" + TextId.Text
-                    .ToString() + "','" + txtName.Text.ToString() + "')";
+                string q = "Insert into EMPLOYEESTABLE(id,FIRSTNAME, gender)values('" + TextId.Text
+                    .ToString() + "','" + txtName.Text.ToString() + "', 'Male')";
                 SqlCommand cmd = new SqlCommand(q, con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Connection made Successfuly..!");
